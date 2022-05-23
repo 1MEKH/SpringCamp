@@ -1,0 +1,4 @@
+Яку мову програмування ви обираєте?,1)Java;2)C++;3)JS;4)Python,1
+Яка анотація використовується для впровадження в IoC?,1)@Component;2)@Controller;3)@Autowired;4)@Bean,3
+Яка різниця між @Before @BeforeClass?,1)@B викликається перед кожним тестом @BC викликається один раз;2)@BC викликається перед кожним тестом @B викликається один раз;3)@BC не існує;4) @BC не існує,1
+Яка різниця між @Component та @ComponentScan?,1)@ComponentScan визначає пакети для сканування для @Component;2)@ComponentScan батьківський @Component;3)@ComponentScan нащадок @Component;4)@ComponentScan забезпечує механізми перевірки @Component ,1

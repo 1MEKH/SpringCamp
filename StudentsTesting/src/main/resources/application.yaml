@@ -1,0 +1,11 @@
+app:
+  countOfAnswersForSuccessfulTest: 3
+  language: en
+
+spring:
+  messages:
+    basename: bundle/message
+    encoding: utf-8
+
+  main:
+    allow-circular-references: true

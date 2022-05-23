@@ -1,0 +1,4 @@
+Which programming language you choose?,1)Java;2)C++;3)JS;4)Python,1
+What annotation is used for inculcation in IoC?,1)@Component;2)@Controller;3)@Autowired;4)@Bean,3
+What's the difference between @Before @BeforeClass?,1)@B is called before every test @BC is called once;2)@BC is called before every test @B is called once;3)@BC does not exist;4)@BC does not exist,1
+What is the difference between @Component and @ComponentScan?,1)@ComponentScan defines packages to scan for @Component;2)@ComponentScan parent @Component;3)@ComponentScan descendant of @Component;4)@ComponentScan provides @Component validation mechanisms,1
