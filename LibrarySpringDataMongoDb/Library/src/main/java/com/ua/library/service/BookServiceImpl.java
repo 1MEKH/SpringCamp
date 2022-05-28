@@ -1,7 +1,7 @@
 package com.ua.library.service;
 
 import com.ua.library.domain.Book;
-import com.ua.library.repositiry.BookRepository;
+import com.ua.library.repository.BookRepository;
 import com.ua.library.service.IO.IOService;
 import org.springframework.stereotype.Service;
 

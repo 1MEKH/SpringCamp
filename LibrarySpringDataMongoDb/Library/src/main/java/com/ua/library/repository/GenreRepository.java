@@ -1,4 +1,4 @@
-package com.ua.library.repositiry;
+package com.ua.library.repository;
 
 import com.ua.library.domain.Genre;
 import org.springframework.data.mongodb.repository.MongoRepository;

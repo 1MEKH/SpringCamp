@@ -1,7 +1,7 @@
 package com.ua.library.service;
 
 import com.ua.library.domain.Genre;
-import com.ua.library.repositiry.GenreRepository;
+import com.ua.library.repository.GenreRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.ua.library.service;
 
 import com.ua.library.domain.Author;
-import com.ua.library.repositiry.AuthorRepository;
+import com.ua.library.repository.AuthorRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
