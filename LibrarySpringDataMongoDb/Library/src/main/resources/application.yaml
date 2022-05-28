@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      database: springCamp
+      port: 27017
+      host: localhost
