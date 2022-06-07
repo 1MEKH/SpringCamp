@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+  <title>Book</title>
+</head>
+<body>
+
+<div>
+  <span th:text="${book.tittle}">book tittle</span><br>
+  <span th:text="${book.author.surname}">author name</span><br>
+  <span th:text="${book.genre.type}">genre type</span><br>
+</div>
+
+<form th:action="@{/book/{id}(id = ${book.id})}" th:method="post">
+
+  <br><label for="comment-input">Comment:</label><br>
+  <input id="comment-input" type="text" th:field="${comment.text}" value="text"/>
+
+  <button type="submit">Save</button>
+</form>
+</body>
+</html>
