@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springCamp
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+
+#  jpa:
+#    show-sql: true
+
+  sql:
+    init:
+      schema-locations: classpath:database/schema.sql
+      data-locations: classpath:database/data.sql
+      mode: always

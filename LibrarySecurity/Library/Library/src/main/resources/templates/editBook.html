@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+  <title>Edit book</title>
+</head>
+<body>
+<form th:action="@{/book/{id}/edit(id = ${book.id})}" th:method="post">
+
+  <label>
+    <input  type="text" th:field="${book.tittle}" value="Tittle"/>
+  </label><br>
+
+  <label>
+    <input  type="text" th:field="${book.author.surname}" value="Author surname"/>
+  </label><br>
+
+  <label>
+    <input  type="text" th:field="${book.genre.type}" value="Genre type"/>
+  </label><br>
+
+  <button type="submit">Edit book</button>
+</form>
+</body>
+</html>

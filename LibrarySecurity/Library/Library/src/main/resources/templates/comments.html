@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+  <title>Book comments</title>
+</head>
+<body>
+<div th:each="comment : ${comments}">
+  <span th:text="${comment.text}"> comment </span>
+  <span th:text="${comment.user.username}"> user </span>
+</div>
+</body>
+</html>
