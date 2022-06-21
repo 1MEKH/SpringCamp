@@ -2,6 +2,7 @@ package com.ua.library.repository;
 
 import com.ua.library.domain.Book;
 import com.ua.library.domain.Comment;
+import com.ua.library.domain.security.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

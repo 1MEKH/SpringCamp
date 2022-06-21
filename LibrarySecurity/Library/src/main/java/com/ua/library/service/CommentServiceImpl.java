@@ -54,7 +54,7 @@ public class CommentServiceImpl implements CommentService{
 
     @Override
     public void deleteById(long id) {
-        if(getById(id) == null)
+        if(getById(id) != null)
         {
             commentRepository.deleteById(id);
         }

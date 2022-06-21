@@ -4,25 +4,30 @@ import com.ua.library.domain.Author;
 import com.ua.library.domain.Book;
 import com.ua.library.domain.Comment;
 import com.ua.library.domain.Genre;
+import com.ua.library.domain.security.User;
 import com.ua.library.service.BookService;
 import com.ua.library.service.CommentService;
-import com.ua.library.service.IO.IOService;
+import com.ua.library.service.security.UserService;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.security.Principal;
 import java.util.List;
 
 @Controller
 public class BookController {
     private final BookService bookService;
     private final CommentService commentService;
+    private final UserService userService;
 
-    public BookController(BookService bookService, CommentService commentService) {
+    public BookController(BookService bookService, CommentService commentService, UserService userService) {
         this.bookService = bookService;
         this.commentService = commentService;
+        this.userService = userService;
     }
 
     @GetMapping("/book")
@@ -53,8 +58,9 @@ public class BookController {
     }
 
     @PostMapping("/book/{id}")
-    String addComment(@PathVariable long id, Comment comment){
+    String addComment(@PathVariable long id, Comment comment, Principal principal){
         comment.setBook(bookService.getById(id));
+        comment.setUser((User) userService.loadUserByUsername(principal.getName()));
         commentService.addNew(comment);
         return "redirect:/book/"+id+"/comment";
     }
@@ -68,6 +74,8 @@ public class BookController {
     }
 
     @GetMapping("/book/{id}/comment/{commentId}/delete")
+    @PreAuthorize("hasAuthority('ADMIN') or" +
+            " principal.username == @commentRepository.getById(#commentId).user.username")
     String deleteComment(@PathVariable long commentId, @PathVariable long id){
         commentService.deleteById(commentId);
         return "redirect:/book/" + id + "/comment";
