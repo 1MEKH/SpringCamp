@@ -58,4 +58,14 @@ public class BookServiceImpl implements BookService{
         return bookRepository.count();
     }
 
+    @Override
+    public void deleteByTittle(String tittle) {
+        bookRepository.deleteByTittle(tittle);
+    }
+
+    @Override
+    public Book findByTittle(String tittle) {
+        return bookRepository.findByTittle(tittle);
+    }
+
 }

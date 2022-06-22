@@ -4,3 +4,8 @@ spring:
       database: springCamp
       port: 27017
       host: localhost
+
+mongock:
+  runner-type: "InitializingBean"
+  change-logs-scan-package:
+    - com.ua.library.changelogs

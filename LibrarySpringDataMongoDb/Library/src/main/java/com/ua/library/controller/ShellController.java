@@ -49,16 +49,6 @@ public class ShellController {
         bookService.findAll().forEach((book) -> ioService.out(book.toString()));
     }
 
-    @ShellMethod(value = "SHOW ALL AUTHORS",key = {"all authors","allA"})
-    public void allAuthors(){
-        authorService.findAll().forEach((author) -> ioService.out(author.toString()));
-    }
-
-    @ShellMethod(value = "SHOW ALL GENRES",key = {"all genres","allG"})
-    public void allGenres(){
-        genreService.findAll().forEach((genre) -> ioService.out(genre.toString()));
-    }
-
     @ShellMethod(value = "COUNT OF BOOKS", key = {"count of books","cB"})
     public void countOfBooks(){
         ioService.out("Count of books = "+ bookService.count());
@@ -97,19 +87,6 @@ public class ShellController {
             ioService.out("[+] " + genreType + " created");
         }
         return genre;
-    }
-
-    @ShellMethod(value = "DELETE AUTHOR", key={"delete author","delA"})
-    public void deleteAuthor(){
-        ioService.out("Write author surname ::");
-        String authorSurname = ioService.read();
-        Author author = authorService.findBySurname(authorSurname);
-        if(author == null){
-            ioService.out("[-] Author with this surname did not find");
-        }
-        else {
-            authorService.deleteBySurname(author.getSurname());
-        }
     }
 
 

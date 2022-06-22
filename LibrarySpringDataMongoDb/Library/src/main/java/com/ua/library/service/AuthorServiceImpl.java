@@ -36,7 +36,7 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    public Author deleteBySurname(String surname) {
-        return authorRepository.deleteBySurname(surname);
+    public void deleteBySurname(String surname) {
+        authorRepository.deleteBySurname(surname);
     }
 }
