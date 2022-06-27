@@ -1,0 +1,29 @@
+spring:
+
+  data:
+    mongodb:
+      database: springCamp
+      port: 27017
+      host: localhost
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springCamp
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+
+  sql:
+    init:
+      schema-locations: classpath:schema.sql
+      mode: always
+
+  batch:
+    job:
+      enabled: false
+    jdbc:
+      initialize-schema: always
+
+mongock:
+  runner-type: "InitializingBean"
+  change-logs-scan-package:
+    - com.ua.library.changelogs
