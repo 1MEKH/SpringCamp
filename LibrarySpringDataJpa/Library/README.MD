@@ -1,4 +1,4 @@
-Library SpringDataJpa <br />
+Library SpringDataJpa ✅<br />
 🍃Spring stack: Spring Boot, Spring Data Jpa, Spring Shell <br />
   Database: postgresql
 - created an application library (where the data is in the database Postgresql)
