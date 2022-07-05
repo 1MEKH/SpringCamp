@@ -1,4 +1,4 @@
-Library SpringDataMongoDb <br />
+Library SpringDataMongoDb ✅<br />
 🍃Spring stack: Spring Boot, Spring Data MongoDb, Spring Shell <br />
   Database: MongoDb
 - created an application library (where the data is in the database MongoDb)
