@@ -1,4 +1,4 @@
-LibraryWeb <br />
+LibraryWeb ✅ <br />
 🍃Spring stack: Spring Boot, Spring Data Jpa, Spring MVC, Thymeleaf <br />
 Database: postgresql
 - created an application library (where the data is in the database Postgresql)
