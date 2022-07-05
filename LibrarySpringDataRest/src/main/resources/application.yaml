@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springCamp
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+
+  sql:
+    init:
+      schema-locations: classpath:database/schema.sql
+      data-locations: classpath:database/data.sql
+      mode: always
+
+  data:
+    rest:
+      base-path: /rest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,logfile,beans
+
+  endpoint:
+    health:
+      show-details: always
+
+  health:
+    defaults:
+      enabled: true
