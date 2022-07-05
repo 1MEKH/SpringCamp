@@ -1,4 +1,4 @@
-LibrarySpringDataRest <br />
+LibrarySpringDataRest ✅ <br />
 🍃Spring stack: Spring Boot, Spring Data Jpa, Spring Data Rest, Spring Actuator, Spring MVC <br />
  Database: postgresql
  - сreated metrics, healthchecks and logfile to application
