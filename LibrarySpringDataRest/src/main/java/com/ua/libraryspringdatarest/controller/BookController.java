@@ -25,7 +25,7 @@ public class BookController {
     }
 
     @PostMapping("/book")
-    public ResponseEntity<?> createBook(Book book) {
+    public ResponseEntity<?> createBook(@RequestBody Book book) {
         bookService.addBook(book);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
@@ -39,7 +39,7 @@ public class BookController {
     }
 
     @PutMapping("/book/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") long id, Book book) {
+    public ResponseEntity<?> update(@PathVariable("id") long id,@RequestBody Book book) {
         bookService.update(id, book);
         return new ResponseEntity<>(HttpStatus.OK);
     }
