@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/JWT
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    show-sql: true
+
+server:
+  port: 9090
+
+jwt:
+  token:
+    secret: jwtSecret
+    validity: 3600000
