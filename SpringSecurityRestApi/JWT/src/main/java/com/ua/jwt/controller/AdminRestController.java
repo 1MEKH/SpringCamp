@@ -26,6 +26,13 @@ public class AdminRestController {
         UserDto result = UserDto.fromUser(user);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
-
+    
+    @PostMapping("users")
+    public ResponseEntity<UserDto> createUser(@RequestBody AuthenticationRequestDto userDto){
+        User user = AuthenticationRequestDto.toUser(userDto);
+        userService.register(user);
+        UserDto result = UserDto.fromUser(user);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
 
 }
